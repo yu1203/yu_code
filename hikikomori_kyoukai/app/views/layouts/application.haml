@@ -8,5 +8,7 @@
 
   %body{class:@body_classes}
     = render "layouts/title_bar"
+    %p.notice= notice
+    %p.alert= alert
     = yield
     = render "layouts/footer"

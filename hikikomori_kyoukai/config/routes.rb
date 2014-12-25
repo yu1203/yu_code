@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :hikikomoris
   root "page#landing"
   get "about", to: "page#about", as: "about"
   # The priority is based upon order of creation: first created -> highest priority.
