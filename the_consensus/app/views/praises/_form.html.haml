@@ -1,0 +1,12 @@
+= form_for @praise do |f|
+  - if @praise.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@praise.errors.count, "error")} prohibited this praise from being saved:"
+      %ul
+        - @praise.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.text_field :content
+    = f.hidden_field :course_id, value: @course.id
+    = f.submit 'Save'

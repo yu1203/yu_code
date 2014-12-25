@@ -1,0 +1,22 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @course.name
+%p
+  %b Course code:
+  = @course.course_code
+
+= link_to 'Edit', edit_course_path(@course)
+\|
+= link_to 'Back', courses_path
+
+%h3 Praises
+- @praises.each do |a|
+  %p= a.content
+= render "praises/form"
+
+%h3 Criticisms
+- @criticisms.each do |b|
+  %p= b.content
+= render "criticisms/form"

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @praise.content
+%p
+  %b Course:
+  = @praise.course_id
+
+= link_to 'Edit', edit_praise_path(@praise)
+\|
+= link_to 'Back', praises_path

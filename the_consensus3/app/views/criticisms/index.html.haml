@@ -1,0 +1,21 @@
+%h1 Listing criticisms
+
+%table
+  %tr
+    %th Content
+    %th Course
+    %th
+    %th
+    %th
+
+  - @criticisms.each do |criticism|
+    %tr
+      %td= criticism.content
+      %td= criticism.course_id
+      %td= link_to 'Show', criticism
+      %td= link_to 'Edit', edit_criticism_path(criticism)
+      %td= link_to 'Destroy', criticism, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Criticism', new_criticism_path

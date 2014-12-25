@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @criticism.content
+%p
+  %b Course:
+  = @criticism.course_id
+
+= link_to 'Edit', edit_criticism_path(@criticism)
+\|
+= link_to 'Back', @criticism.course

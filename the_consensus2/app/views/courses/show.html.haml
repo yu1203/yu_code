@@ -1,0 +1,24 @@
+- @body_classes = "course"
+
+%p#notice= notice
+
+%h1
+  = @course.course_code
+  = @course.name
+
+.links
+  = link_to 'Edit', edit_course_path(@course)
+  \|
+  = link_to 'Back', courses_path
+
+.praises
+  %h3 Praises
+  - @praises.each do |a|
+    %p= a.content
+  = render "praises/form"
+
+.criticisms
+  %h3 Criticisms
+  - @criticisms.each do|b|
+    %p= b.content
+  = render "criticisms/form"

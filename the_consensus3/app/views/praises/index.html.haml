@@ -1,0 +1,21 @@
+%h1 Listing praises
+
+%table
+  %tr
+    %th Content
+    %th Course
+    %th
+    %th
+    %th
+
+  - @praises.each do |praise|
+    %tr
+      %td= praise.content
+      %td= praise.course_id
+      %td= link_to 'Show', praise
+      %td= link_to 'Edit', edit_praise_path(praise)
+      %td= link_to 'Destroy', praise, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Praise', new_praise_path

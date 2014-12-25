@@ -1,0 +1,9 @@
+%h1 Editing course
+
+= render 'form'
+
+= link_to 'Show', @course
+\|
+= link_to 'Back', courses_path
+\|
+%td= link_to 'Destroy', @course, :method => :delete, :data => { :confirm => 'Are you sure?' }
