@@ -1,4 +1,4 @@
 .title-bar
   %h1= link_to "Hikikomori Kyoukai", root_path
   = link_to "About", about_path, class: "about"
-  %p= current_hikikomori.email
+  %p= current_hikikomori.email if current_hikikomori
