@@ -1,0 +1,13 @@
+body {
+  background: lightgreen;
+  margin: 0;
+}
+a {
+  display: block;
+}
+
+.content {
+  padding-left: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
