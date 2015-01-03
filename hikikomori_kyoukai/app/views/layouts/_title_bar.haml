@@ -1,4 +1,6 @@
 .title-bar
   %h1= link_to "Hikikomori Kyoukai", root_path
-  = link_to "About", about_path, class: "about"
-  %p= current_hikikomori.email
+  = link_to "About", about_path, class: "about" if not current_hikikomori
+  %p= link_to current_hikikomori.email, current_hikikomori if current_hikikomori
+  %p= link_to "Login", new_hikikomori_session_path if !current_hikikomori
+  %p= link_to "Logout", destroy_hikikomori_session_path if current_hikikomori

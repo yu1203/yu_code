@@ -1,0 +1,17 @@
+%h1 Listing hikikomoris
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @hikikomoris.each do |hikikomori|
+    %tr
+      %td= link_to 'Show', hikikomori
+      %td= link_to 'Edit', edit_hikikomori_path(hikikomori)
+      %td= link_to 'Destroy', hikikomori, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Hikikomori', new_hikikomori_path
